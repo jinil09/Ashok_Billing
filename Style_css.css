@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    /* transition: all 0.5s linear; */
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* .First{
+    width: 100vw;
+    height: auto;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containfdetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.containfdetails p{
+    font-size: 1.5rem;
+} */
+
+/* Style the First section */
+.First {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the leftformcontain div */
+.leftformcontain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style the containfdetails divs */
+.containfdetails {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the <p> elements */
+.containfdetails p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Style the input and select elements */
+.containfdetails input,
+.containfdetails select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Style the submit button (if you have one) */
+/* Example:
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+*/
+
+/* ---------------------------------------------------------------- */
+/* Style for the input and button */
+.inputs {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputs input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.inputs a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+/* Style for the table */
+.Vtab {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Style for the "Add Item" button */
+.btnadd {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for the "Add Item" button */
+.btnadd:hover {
+    background-color: #45a049;
+}
+
+/* Highlight effect for table rows */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.preViewS {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the table */
+.Vtab1 {
+    margin-top: 20px;
+}
+
+.tabP1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table headers */
+th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style for table cells */
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style for the "Copy" button */
+.copybtn {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for the "Copy" button */
+.copybtn:hover {
+    background-color: #e67e22;
+}
+
+/* Active (clicked) state for the "Copy" button */
+.copybtn:active {
+    background-color: #d35400;
+}
+
+/* ------------------------------------------------- */
+
+.downloadbtn {
+    text-align: center; 
+    margin: 2rem 0;
+}
+
+.downloadbtn button {
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+.downloadbtn button:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+
+/* ----------------------------------------------------------------------- */
+.Details {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100vw;
+    margin: 2rem auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .Dcontain {
+    margin: 10px 0;
+  }
+  
+  .Dcontain p {
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #wordtotamount {
+    font-style: italic;
+    font-size: 16px;
+  }
+  
+
+  .valh3{
+    font-size: 15px;
+    color: red;
+  }
+
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+    .tabP1 th, .tabP2 th, .tabP1 td, .tabP2 td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .copybtn {
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+
+    .chrr{
+        margin-top: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .tabP1 th, .tabP2 th, .tabP1 td, .tabP2 td {
+        padding: 3px;
+        font-size: 10px;
+    }
+
+    .copybtn {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    /* Adjust the width and padding for the leftformcontain div */
+    .leftformcontain {
+        flex-direction: column;
+    }
+
+    /* Adjust the margin and padding for the containfdetails divs */
+    .containfdetails {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    /* Increase the font size for better readability on small screens */
+    .containfdetails p {
+        font-size: 18px;
+    }
+
+    /* Increase the padding and font size for input and select elements */
+    .containfdetails input,
+    .containfdetails select {
+        padding: 12px;
+        font-size: 16px;
+    }
+}

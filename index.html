@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp" ng-controller="mycontroller">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Eng. Work</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script src="angular.min.js"></script>
+
+    <link rel="stylesheet" href="Style_css.css">
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <section class="First">
+        
+        <div class="leftformcontain">
+            <div class="containfdetails">
+                <p>Invoice No</p>
+                <input type="Number" id="invoice_no" name="invoice_no" placeholder="G / 000 / 2023-24.">
+            </div>
+    
+            <div class="containfdetails">
+                <p>Invoice Date</p>
+                <input type="date" id="invoice_date" name="invoice_date">
+            </div>
+    
+            <div class="containfdetails">
+                <p>D.C.NO</p>
+                <input type="text" id="dcNo" name="dcNo">
+            </div>
+    
+            <div class="containfdetails">
+                <p>Unit No</p>
+                <select id="unitno">
+                    <option value="">-----Select one-----</option>
+                    <option value="(Unit - 1)">Unit - 1</option>
+                    <option value="(Unit - 4)">Unit - 4</option>
+                    <option value="(Unit - 5)">Unit - 5</option>
+                    <option value="(Unit - 6)">Unit - 6</option>
+                </select>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ------------------------------------------------- -->
+
+    <section class="mainSec" id="mainSection">
+
+        <div class="inputs">
+            <input type="text" ng-model="searchitem" placeholder="Search Here...">
+            <a href="#pree" class="chrr">Click Here</a>
+        </div>
+        
+        <div class="Vtab">
+            <table border="2px">
+
+                <tr>
+                    <th class="htt1">Item</th>
+                    <th class="htt2">Price</th>
+                    <th class="htt3">Add Item</th>
+                </tr>
+                
+                <tr ng-repeat="item in itemList | filter:searchitem">
+
+                    <td class="it1">{{item.name}}</td>
+                    <td class="it2">{{item.price}}</td>
+                    
+                    <td class="tbtn"><button ng-click="addItem(item)" class="btnadd">AddItem</button></td>
+                </tr>
+
+                
+            </table>
+        </div>
+
+    
+
+    
+    <div class="preViewS" id="pree">
+        <div class="Vtab">
+            <table class="tabP" border="2px">
+
+                <tr>
+                    <th class="htt11">Item</th>
+                    <th class="htt11">Price</th>
+                    <th class="htt11">QTY</th>
+                    
+                </tr>
+
+                <tr ng-repeat="preItem in previewList">
+
+                    <td class="itt1">{{preItem.name}}</td>
+                    <td class="itt1">{{preItem.price}}</td>
+                    <td class="itt1">{{preItem.qty}}</td>
+                    <td class="cptt1"><button class="copybtn" ng-click="copyItem(preItem.name)">Copy</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</section>
+
+<Section class="Details">
+    <div class="Dcontain">
+        <p>Name Of downloading file</p>
+        <input type="text" id="dwnname" name="dwnname" placeholder="BILL NO - 043">
+    </div>
+    <div class="Dcontain">
+        <p>Total Amount in Word</p>
+        <p id="wordtotamount">{{sum}}</p>
+        <h3 class="valh3">{{sumInWords}}</h3>
+        <button ng-click="copyToClipboard()">Copy this</button>
+    </div>
+</Section>
+
+<section class="downloadbtn">
+    <button type="button" onclick="generateExcel()">Generate Excel</button>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+
+</body>
+</html>
