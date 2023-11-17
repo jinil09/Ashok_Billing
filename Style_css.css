@@ -220,12 +220,49 @@ td {
 
 /* ------------------------------------------------- */
 
-.downloadbtn {
-    text-align: center; 
-    margin: 2rem 0;
+.downloadbtn button {
+  background-color: rgb(165, 239, 155);
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.downloadbtn button {
+.downloadbtn button:hover {
+  background-color: #fff;
+}
+
+.downloadbtn button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .downloadbtn button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+.downloadbtn {
+    text-align: center; 
+    margin: 3rem 0;
+}
+
+
+/* .downloadbtn button {
     padding: 10px 20px; 
     background-color: #007bff; 
     color: #fff; 
@@ -236,8 +273,8 @@ td {
 }
 
 .downloadbtn button:hover {
-    background-color: #0056b3; /* Change the background color on hover */
-}
+    background-color: #0056b3; 
+} */
 
 /* ----------------------------------------------------------------------- */
 .Details {
