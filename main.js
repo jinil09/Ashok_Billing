@@ -224,10 +224,12 @@ const app=angular.module("myapp",[])
             $scope.addItem=function(item){
 
                 var quantity = prompt("Enter Quantity");
-                item.qty = quantity;
-                $scope.previewList.push(item)
+                if(quantity > 0)
+                {
+                    item.qty = quantity;
+                    $scope.previewList.push(item)
+                }
                     
-
             }
 
             $scope.copyItem=function(item){
