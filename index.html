@@ -108,16 +108,16 @@
 <Section class="Details">
     <div class="Dcontain">
         <p>Name Of downloading file</p>
-        <input type="text" id="dwnname" name="dwnname" placeholder="BILL NO - 043">
+        <input type="text" id="dwnname" name="dwnname" placeholder="BILL NO - 043" style="margin-top: 1.5rem;">
     </div>
     <div class="Dcontain">
         <p>Total Amount in Word</p>
         <p id="wordtotamount">{{sum}}</p>
         <h3 class="valh3">{{sumInWords}}</h3>
-        <button ng-click="copyToClipboard()">Copy this</button>
+        <button ng-click="copyToClipboard()" style="margin-top: 1.2rem;">Copy this</button>
     </div>
 </Section>
-
+    
 <section class="downloadbtn">
     <button type="button" onclick="generateExcel()">Generate Excel</button>
 </section>
