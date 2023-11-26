@@ -302,7 +302,15 @@ td {
   }
   
   .Dcontain {
+    border: 2px dashed black;
+    padding: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
     margin: 10px 0;
+  }
+  
+  .Dcontain:hover{
+    background-color: white;
   }
   
   .Dcontain p {
@@ -358,6 +366,11 @@ td {
 
     .chrr{
         margin-top: 1.5rem;
+    }
+
+    .Details{
+        flex-direction: column;
+        gap: 3rem;
     }
 }
 
