@@ -401,3 +401,35 @@ td {
         font-size: 16px;
     }
 }
+
+/* ------------------------------ */
+.footer{
+    width:100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    padding:1rem 2rem;
+    margin-top: 1rem;
+    background:black;
+    margin-top: 2rem;
+  }
+  
+  .footer h1{
+    color:#fff;
+    letter-spacing: .1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  @media (max-width:550px){
+    .footer{
+      flex-flow: column;
+    }
+    .footer h1{
+      text-align: center;
+    }
+    
+  }
+
+
+  
