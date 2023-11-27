@@ -349,6 +349,11 @@ td {
 
   .valh3{
     font-size: 15px;
+    color: black;
+    font-weight: bolder;
+  }
+
+  .with_without{
     color: red;
   }
 
