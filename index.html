@@ -112,8 +112,9 @@
     </div>
     <div class="Dcontain">
         <p>Total Amount in Word</p>
-        <p id="wordtotamount">{{sum}}</p>
-        <h3 class="valh3">{{sumInWords}}</h3>
+        <p id="wordtotamount">{{without_gst_amount}}</p>
+        <p id="wordtotamount">{{sum}} <span class="with_without">*With 18% GST</span></p>
+        <h3 class="valh3">[ {{sumInWords}} ]</h3>
         <button ng-click="copyToClipboard()" style="margin-top: 1.2rem;">Copy this</button>
     </div>
 </Section>
