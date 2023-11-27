@@ -248,6 +248,9 @@ const app=angular.module("myapp",[])
 
                     $scope.sum += parseFloat($scope.previewList[i].price * $scope.previewList[i].qty);
                 }
+                $scope.without_gst_amount = $scope.sum;
+                $scope.temp_sum = ($scope.sum * 18)/100;
+                $scope.sum = $scope.sum + $scope.temp_sum;
                 $scope.sum = $scope.sum.toFixed(2);
                 $scope.sumInWords = numberToWords(Math.floor($scope.sum));
             });
@@ -348,6 +351,8 @@ async function generateExcel() {
         var cellAddressqty = 'J' + rowIndex;
         var Finalrate = 'O' + rowIndex;
         var hsnnooo = 'I' + rowIndex;
+        var nodigit = 'A' + rowIndex;
+
         worksheet.getCell(cellAddress).value = angular.element(document.querySelector('[ng-controller="mycontroller"]')).scope().previewList[i].name;
 
         worksheet.getCell(cellAddressRate).value = angular.element(document.querySelector('[ng-controller="mycontroller"]')).scope().previewList[i].price;
@@ -358,6 +363,8 @@ async function generateExcel() {
         
         worksheet.getCell(hsnnooo).value = "84669200";
 
+        worksheet.getCell(nodigit).value = count;
+        count++;
         rowIndex++;
           
       }
