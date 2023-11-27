@@ -343,7 +343,7 @@ async function generateExcel() {
     worksheet.getCell('A19').value = nameunit;
 
     var rowIndex = 27; // Initialize the starting row index
-
+    var count=1;
     for (var i = 0; i < angular.element(document.querySelector('[ng-controller="mycontroller"]')).scope().previewList.length; i++) {
         
         var cellAddress = 'B' + rowIndex;
